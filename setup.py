@@ -11,7 +11,7 @@ setup(
     description="Data Structures Class Stack",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/SandroFernandes/usefull",
+    url="https://github.com/SandroFernandes/PyDataStructures",
     packages=find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
