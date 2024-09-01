@@ -1,87 +1,104 @@
-# Stack class
+# This is a draft
+# Python Data Structures Project
 
-## Methods:
-    
-- push: Adds a new element to the stack.
+This project contains implementations of common data structures in Python, 
+including a Queue and a Stack class.
+Each class is thoroughly 
+documented and includes examples of usage.
 
-- pop: Removes the top element from the stack.
-       Raises an exception if the stack is empty.
+## Table of Contents
 
-- is_empty: Returns True if the stack is empty, False otherwise.
+- [Installation](#installation)
+- [Usage](#usage)
+- [Queue Class](#queue-class)
+- [Stack Class](#stack-class)
+- [Testing](#testing)
+- [Contributing](#contributing)
+- [License](#license)
 
-- peek: Returns the top element of the stack.
-        Raises an exception if the stack is empty.
+## Installation
 
-- dump: Returns all elements in the stack.
-        Resets the stack to an empty state.
+To use the classes in this project, clone the repository:
 
-- size: Returns the number of elements in the stack.
+```sh
+git clone https://github.com/SandroFernandes/PyDataStructures.git
+```
 
-- clear: Clears all items from the stack.
+Navigate to the project directory:
 
-- contains: Checks if the stack contains a specific item.
+```sh
+cd PyDataStructures
+```
 
-- reverse: Reverses the order of items in the stack.
+## Usage
 
-- clone: Creates a shallow copy of the stack.
+You can import and use the classes in your own Python scripts.
+Here is an example of how to use the `Queue` and `Stack` classes:
 
-- __iter__: Returns an iterator for the stack.
+### Queue Class
 
-- swap: Swaps the top two elements of the stack.
-        Raises an exception if the stack has fewer than two elements.
-
-- __len__: Returns the number of elements in the stack.
-
-- __str__: Returns a string representation of the stack.
-
-Raises:
-    StackIsEmpty: If the stack is empty and pop, peek, or swap is called.
-
-Examples:
 ```python
->>> stack = Stack()
->>> stack.push(1)
->>> stack.push(2)
->>> stack.push(3)
->>> stack.size()
-3
->>> stack.pop()
-3
->>> stack.peek()
-2
->>> stack.is_empty()
-False
->>> stack.dump()
-[1, 2]
->>> stack.size()
-0
->>> stack.is_empty()
-True
->>> stack.push(1)
->>> stack.push(2)
->>> stack.contains(1)
-True
->>> stack.contains(3)
-False
->>> stack.reverse()
->>> str(stack)
-'[2, 1]'
->>> stack_clone = stack.clone()
->>> str(stack_clone)
-'[2, 1]'
->>> stack.clear()
->>> stack.is_empty()
-True
->>> stack.push(1)
->>> stack.push(2)
->>> stack.push(3)
->>> for item in stack:
-...     print(item)
-1
-2
-3
->>> stack.swap()
->>> stack.pop()
-2
->>> stack.pop()
-3
+from queue import  Queue
+
+q = Queue()
+q.enqueue(1)
+q.enqueue(2)
+print(q.dequeue())  # Output: 1
+print(q.peek())     # Output: 2
+```
+
+### Stack Class
+
+```python
+from stack import Stack
+
+s = Stack()
+s.push(1)
+s.push(2)
+print(s.pop())   # Output: 2
+print(s.peek())  # Output: 1
+```
+
+## Queue Class
+
+For detailed documentation on the `Queue` class, please refer to [Queue_Docs.md](Queue_Docs.md).
+
+## Stack Class
+
+For detailed documentation on the `Stack` class, please refer to [Stack_Docs.md](Stack_Docs.md).
+
+## Testing
+
+This project includes unit tests for the `Queue` and `Stack` classes. 
+To run the tests, you will need to have `pytest` installed. 
+You can install `pytest` using `pip`:
+
+
+```sh
+pip install pytest
+```
+
+To run the tests, navigate to the project directory and run:
+
+```sh
+pytest test_queue.py
+pytest test_stack.py
+```
+
+```zsh
+pytest test_queue.py
+pytest test_stack.py
+```
+
+```bash
+pytest test_queue.py
+pytest test_stack.py
+```
+
+## Contributing
+
+Contributions are welcome! Please fork the repository and submit a pull request with your changes.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.

@@ -1,5 +1,20 @@
 import pytest
-from ..stack import Stack, StackIsEmpty
+from ..stack import (Stack,
+                     StackException,
+                     STACK_IS_EMPTY,
+                     STACK_IS_LESS_THAN_TWO)
+
+
+def test_stack_is_empty_exception():
+    with pytest.raises(StackException) as excinfo:
+        raise StackException("Stack is empty")
+    assert str(excinfo.value) == "Stack is empty"
+
+
+def test_stack_is_too_small_exception():
+    with pytest.raises(StackException) as excinfo:
+        raise StackException("Stack is too small")
+    assert str(excinfo.value) == "Stack is too small"
 
 
 def test_push():
@@ -21,7 +36,7 @@ def test_pop():
 
 def test_pop_empty():
     stack = Stack()
-    with pytest.raises(StackIsEmpty):
+    with pytest.raises(StackException):
         stack.pop()
 
 
@@ -45,7 +60,7 @@ def test_peek():
 
 def test_peek_empty():
     stack = Stack()
-    with pytest.raises(StackIsEmpty):
+    with pytest.raises(StackException):
         stack.peek()
 
 
@@ -97,10 +112,10 @@ def test_contains():
     stack.push(1)
     stack.push(2)
     stack.push(3)
-    assert 1 in stack
-    assert 2 in stack
-    assert 3 in stack
-    assert 4 not in stack
+    assert stack.contains(1)
+    assert stack.contains(2)
+    assert stack.contains(3)
+    assert not stack.contains(4)
 
 
 def test_reverse():
@@ -161,6 +176,12 @@ def test_swap():
     assert stack.pop() == 2
     assert stack.pop() == 3
     assert stack.pop() == 1
+
+
+def test_swap_empty():
+    stack = Stack()
+    with pytest.raises(StackException):
+        stack.swap()
 
 
 def test_next():
@@ -251,11 +272,11 @@ def test_push_none():
 
 def test_pop_empty_stack_multiple_times():
     stack = Stack()
-    with pytest.raises(StackIsEmpty):
+    with pytest.raises(StackException):
         stack.pop()
-    with pytest.raises(StackIsEmpty):
+    with pytest.raises(StackException):
         stack.pop()
-    with pytest.raises(StackIsEmpty):
+    with pytest.raises(StackException):
         stack.pop()
 
 

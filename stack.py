@@ -1,11 +1,16 @@
-class StackIsEmpty(Exception):
-    """Exception raised when attempting to pop or peek from an empty stack."""
+STACK_IS_EMPTY = "Stack is empty."
+STACK_IS_LESS_THAN_TWO = "Stack has fewer than two elements."
 
-    def __init__(self):
-        super(StackIsEmpty, self).__init__(self)
+
+class StackException(Exception):
+    """Exception raised for errors related to stack operations."""
+
+    def __init__(self, message: str):
+        super(StackException, self).__init__(message)
+        self.message = message
 
     def __str__(self):
-        return "Stack is empty"
+        return self.message
 
 
 class Stack:
@@ -73,7 +78,7 @@ class Stack:
         """
         if not self.is_empty():
             return self.stack.pop()
-        raise StackIsEmpty()
+        raise StackException(STACK_IS_EMPTY)
 
     def is_empty(self):
         """Check if the stack is empty.
@@ -109,7 +114,7 @@ class Stack:
         """
         if not self.is_empty():
             return self.stack[-1]
-        raise StackIsEmpty()
+        raise StackException(STACK_IS_EMPTY)
 
     def dump(self):
         """Clear the stack and return the previous contents.
@@ -257,7 +262,7 @@ class Stack:
         """Swap the top two elements of the stack.
 
         Raises:
-            StackIsEmpty: If the stack has fewer than two elements.
+            StackExceprion: If the stack has fewer than two elements.
 
         Examples:
             >>> stack = Stack()
@@ -270,7 +275,7 @@ class Stack:
             2
         """
         if len(self.stack) < 2:
-            raise StackIsEmpty()
+            raise StackException(STACK_IS_LESS_THAN_TWO)
         self.stack[-1], self.stack[-2] = self.stack[-2], self.stack[-1]
 
     def __len__(self):
