@@ -25,10 +25,10 @@
 
 - clone: Creates a shallow copy of the stack.
 
-- __iter__: Returns an iterator for the stack.
-
 - swap: Swaps the top two elements of the stack.
         Raises an exception if the stack has fewer than two elements.
+
+- __iter__: Returns an iterator for the stack.
 
 - __len__: Returns the number of elements in the stack.
 

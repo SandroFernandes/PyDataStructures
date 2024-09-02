@@ -53,6 +53,7 @@ Appends a new node with the specified data to the end of the list.
 
 **Examples**:
 
+
 ```python
 sll = SinglyLinkedList()
 sll.append(1)

@@ -211,6 +211,26 @@ class Stack:
         new_stack.stack = self.stack[:]
         return new_stack
 
+    def swap(self):
+        """Swap the top two elements of the stack.
+
+        Raises:
+            StackExceprion: If the stack has fewer than two elements.
+
+        Examples:
+            >>> stack = Stack()
+            >>> stack.push(1)
+            >>> stack.push(2)
+            >>> stack.swap()
+            >>> stack.pop()
+            1
+            >>> stack.pop()
+            2
+        """
+        if len(self.stack) < 2:
+            raise StackException(STACK_IS_LESS_THAN_TWO)
+        self.stack[-1], self.stack[-2] = self.stack[-2], self.stack[-1]
+
     def __iter__(self):
         """Return an iterator for the stack.
 
@@ -257,26 +277,6 @@ class Stack:
             return result
         else:
             raise StopIteration
-
-    def swap(self):
-        """Swap the top two elements of the stack.
-
-        Raises:
-            StackExceprion: If the stack has fewer than two elements.
-
-        Examples:
-            >>> stack = Stack()
-            >>> stack.push(1)
-            >>> stack.push(2)
-            >>> stack.swap()
-            >>> stack.pop()
-            1
-            >>> stack.pop()
-            2
-        """
-        if len(self.stack) < 2:
-            raise StackException(STACK_IS_LESS_THAN_TWO)
-        self.stack[-1], self.stack[-2] = self.stack[-2], self.stack[-1]
 
     def __len__(self):
         """Get the number of items in the stack.

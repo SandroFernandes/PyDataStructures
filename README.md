@@ -12,6 +12,7 @@ documented and includes examples of usage.
 - [Usage](#usage)
 - [Queue Class](#queue-class)
 - [Stack Class](#stack-class)
+- [Singly Linked List Class](#singly-linked-list-class)
 - [Testing](#testing)
 - [Contributing](#contributing)
 - [License](#license)
