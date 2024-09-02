@@ -59,6 +59,15 @@ s.push(2)
 print(s.pop())   # Output: 2
 print(s.peek())  # Output: 1
 ```
+### Singly Linked List Class
+
+```python
+from singly_linked_list import Node, SinglyLinkedList
+sll = SinglyLinkedList()
+sll.append(1)
+sll.append(2)
+print(sll)  # Output: 1 -> 2 -> None
+```
 
 ## Queue Class
 
@@ -67,6 +76,10 @@ For detailed documentation on the `Queue` class, please refer to [Queue_Docs.md]
 ## Stack Class
 
 For detailed documentation on the `Stack` class, please refer to [Stack_Docs.md](Stack_Docs.md).
+
+## Singly Linked List Class
+
+for detailed documentation on the `SinglyLinkedList` class, please refer to [SinglyLinkedList_Docs.md](SinglyLinkedList_Docs.md).
 
 ## Testing
 
