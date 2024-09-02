@@ -17,9 +17,9 @@ class Stack:
     """A simple stack implementation.
 
     This class provides a simple stack implementation.
-    It allows you to push and pop items from the stack.
-    You can also check if the stack is empty, peek at the top item,
-    and dump the entire stack.
+    It allows you to push, pop items from the stack.
+    You can also check if the stack is empty, peek at the top item, swap the top two items,
+    dump, reverse, clone the entire stack, rever.
 
     Examples:
         >>> stack = Stack()
@@ -239,7 +239,7 @@ class Stack:
             >>> stack.push(1)
             >>> stack.push(2)
             >>> for item in stack:
-            ...     print(item)
+            ...print(item)
             1
             2
         """

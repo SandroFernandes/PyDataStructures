@@ -1,13 +1,16 @@
 # Singly Linked List Implementation in Python
 
-This document provides an overview of a simple implementation of a singly linked list in Python. The implementation
-consists of two classes: `Node` and `SinglyLinkedList`. The `Node` class represents an individual element of the list,
-while the `SinglyLinkedList` class provides various methods to manipulate and interact with the list.
+This document showcases a Python-based singly linked list implementation. 
+The implementation consists of two classes: Node and SinglyLinkedList. 
+The Node class represents an element of the list. 
+The SinglyLinkedList class provides methods to manipulate and interact with the list.
+
+
 
 ## Node Class
 
-The `Node` class is used to create individual nodes in the linked list. Each node contains data and a reference to the
-next node in the list.
+Developers use the Node class to create individual nodes in the linked list.
+Each node contains data and a reference to the next node in the list.
 
 ### Constructor
 
@@ -55,6 +58,7 @@ Appends a new node with the specified data to the end of the list.
 
 
 ```python
+
 sll = SinglyLinkedList()
 sll.append(1)
 sll.append(2)

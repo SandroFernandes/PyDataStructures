@@ -63,6 +63,7 @@ print(s.peek())  # Output: 1
 
 ```python
 from singly_linked_list import Node, SinglyLinkedList
+
 sll = SinglyLinkedList()
 sll.append(1)
 sll.append(2)
