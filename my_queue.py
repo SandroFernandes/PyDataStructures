@@ -128,56 +128,31 @@ class Queue:
 
     def __iter__(self):
         """
-        Returns the iterator object itself.
+        Returns an iterator for the queue.
+
+        This method allows the queue to be used in a for loop.
 
         Returns:
-            self: The iterator object.
+            iterator: An iterator over the queue's items.
 
         Example:
             >>> q = Queue()
             >>> q.enqueue(1)
             >>> q.enqueue(2)
-            >>> iter_q = iter(q)
-            >>> next(iter_q)
+            >>> q.enqueue(3)
+            >>> for item in q:
+            ...     print(item)
             1
-        """
-        self._index = 0
-        return self
-
-    def __next__(self):
-        """
-        Returns the next item from the queue during iteration.
-
-        Returns:
-            The next item in the queue.
-
-        Raises:
-            StopIteration: If all items have been iterated.
-
-        Example:
-            >>> q = Queue()
-            >>> q.enqueue(1)
-            >>> q.enqueue(2)
-            >>> iter_q = iter(q)
-            >>> next(iter_q)
-            1
-            >>> next(iter_q)
             2
-            >>> next(iter_q)
-            Traceback (most recent call last):
-                ...
-            StopIteration
+            3
         """
-        if self._index < len(self.items):
-            result = self.items[self._index]
-            self._index += 1
-            return result
-        else:
-            raise StopIteration
+        return iter(self.items)
 
     def next(self):
         """
         Removes and returns the item from the front of the queue.
+        This method is an alias for dequeue() to demonstrate
+        different naming conventions.
 
         Returns:
             The item from the front of the queue.
@@ -194,7 +169,4 @@ class Queue:
             >>> str(q)
             '[2]'
         """
-        if not self.is_empty():
-            return self.dequeue()
-        else:
-            raise IndexError("next from an empty queue")
+        return self.dequeue()

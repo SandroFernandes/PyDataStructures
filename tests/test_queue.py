@@ -1,5 +1,5 @@
 import pytest
-from queue import Queue
+from my_queue import Queue
 
 
 def test_is_empty():
