@@ -1,3 +1,10 @@
+"""
+This module provides an implementation of a queue data structure.
+The file is named my_queue.py to avoid conflicts with the built-in queue module.
+This implementation is for educational purposes.
+For real-world applications, consider using the built-in queue module.
+"""
+
 class Queue:
     """
     A simple implementation of a queue data structure.
