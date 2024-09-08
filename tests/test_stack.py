@@ -328,7 +328,3 @@ def test_nested_stack_operations():
     assert len(nested_stack) == 5
     for i in range(4, -1, -1):
         assert nested_stack.pop() == i
-
-
-if __name__ == "__main__":
-    pytest.main()

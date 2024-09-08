@@ -229,3 +229,5 @@ sll.append(3)
 print(sll)  # Output: 1 → 2 → 3 → None
 ```
 
+
+[Previous](../Docs/stack.md) | [Next](../Docs/double_linked_list.md)

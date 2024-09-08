@@ -1,6 +1,13 @@
 # Stack class
 
 ## Methods:
+
+- __init__: Initializes an empty stack.
+  
+```python
+stack = Stack()
+```
+
     
 - push: Adds a new element to the stack.
 ```python
@@ -195,3 +202,6 @@ If you use the method pop or peek at an empty stack.
 Raises:
 "Stack has fewer than two elements."
 If a stack has fewer than two elements and someone calls swap.
+
+
+[Previous](../Docs/queue.md) | [Next](../Docs/single_linked_list.md)

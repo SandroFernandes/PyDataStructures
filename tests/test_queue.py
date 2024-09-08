@@ -74,7 +74,3 @@ def test_next():
     with pytest.raises(IndexError):
         empty_q = Queue()
         empty_q.next()
-
-
-if __name__ == "__main__":
-    pytest.main()

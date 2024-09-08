@@ -106,3 +106,6 @@ print("Empty list after insertion:")
 empty_list.display_forward()
 # Output: 100
 ```
+
+
+[Previous](../Docs/singly_linked_list.md) | [Next](../Docs/testing.md)
