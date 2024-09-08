@@ -1,5 +1,5 @@
 import pytest
-from ..singly_linked_list import SinglyLinkedList, Node
+from src.singly_linked_list import SinglyLinkedList, Node
 
 
 def test_node_initialization():

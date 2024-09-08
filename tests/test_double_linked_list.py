@@ -1,5 +1,5 @@
 import pytest
-from double_linked_list import DoubleLinkedList
+from src.double_linked_list import DoubleLinkedList
 
 @pytest.fixture
 def empty_list():

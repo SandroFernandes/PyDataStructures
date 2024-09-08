@@ -1,8 +1,6 @@
 import pytest
-from ..stack import (Stack,
-                     StackException,
-                     STACK_IS_EMPTY,
-                     STACK_IS_LESS_THAN_TWO)
+from src.stack import (Stack,
+                       StackException)
 
 
 def test_stack_is_empty_exception():
